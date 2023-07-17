@@ -1,10 +1,118 @@
+/* Global Settings */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+html {
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    max-width: 100%;
+    background-image: url(/Background.jpeg);
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: #cccccc; /* Used if the image is unavailable */
+
+}
+
+.container {
+    background-color: black;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+
+
+
+
+.buttons {
+    display: flex;
+    gap: 5px;
+    background-color: black;
+    transition: 0.3s;
+}
+.menu {
+    display: none;
+}
 
 button {
     text-decoration: none;
+    flex-basis: calc(100% / 3);
+    padding: 10px 0;
+    background-color: blue;
+    color: #eee;
+    cursor: pointer;
+    border: none;
+}
+
+.buttons .selected {
+    filter: brightness(75%);
+    position: relative;
+    color: orange;
+    transition: 0.3s;
+}
+
+.buttons .selected::after {
+    content: "";
+    color: orange;
+    background-color: #fff;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(10%);
+    z-index: -1;
+    border-radius: 25%;
+}
+
+button:hover {
+    filter: brightness(75%);
+}
+
+@media (max-width: 500px) {
+    .buttons {
+        flex-direction: column;
+    }
     
+}
+
+
+
+.content {
+    min-height: 500px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+}
+.content div {
+    padding: 20px;
+    background-color: #4b4a4a;
+    border: solid 4px #fff;
+    max-width: 400px;
+}
+.content h2 {
+    font-size: 60px;
+}
+
+.content p {
+    padding-top: 20px;
+    font-size: 40;
+}
+
+footer .container {
+    color: white;
+    text-align: center;
 }

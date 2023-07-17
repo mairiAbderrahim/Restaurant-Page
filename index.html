@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Mairi Abderrahim</title>
 </head>
 <body>
+    <div class="container">
     <h2>The Road Resturant</h2>
+</div>
     <div class="buttons">
-        <button>Home</button>
-        <button>Menu</button>
-        <button>Contact</button>
+        <button id="0" class="selected" onclick="changeSelect(id)">Home</button>
+        <button id="1" onclick="changeSelect(id)">Menu</button>
+        <button id="2" onclick="changeSelect(id)">Contact</button>
     </div>
+    <div class="content"></div>
+    <footer>
+        <div class="container">
+            <p>
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>
+                Abderrahim Mairi
+              </p>
+        </div>
+    </footer>
 </body>
 <script src="/main.js"></script>
 </html>
